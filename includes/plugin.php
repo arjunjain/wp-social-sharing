@@ -17,7 +17,7 @@ function ss_get_options()
 			'load_static'=>array('load_css','load_js'),
 			'facebook_text'=>"Share on Facebook",
 			'twitter_text'=>"Share on Twitter",
-			'googleplus_text'=>"Share on Google plus",
+			'googleplus_text'=>"Share on Google+",
 		);
 
 		$db_option = get_option( 'wp_social_sharing', array() );
