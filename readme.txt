@@ -1,6 +1,7 @@
 === WP Social Sharing ===
 Contributors: arjunjain08
 Author URI: http://www.arjunjain.info
+Plugin URI: http://wordpress.org/plugins/wp-social-sharing/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SQC4WR7X5JGDY&lc=IN&item_name=Social%20Share&item_number=77&button_subtype=services&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted
 Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter, googleplus, facebook
 Requires at least: 3.5
@@ -30,13 +31,20 @@ You can use following shortcode
 `
 [wp_social_sharing] 
 `
-This shortcode will use default social sharing plugin settings.
+This shortcode will use default wp social sharing plugin settings.
 
 ` 
 [wp_social_sharing social_options='facebook,twitter,googleplug' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+']
 `
+
 == Support ==
+
 * Fill up this [form](http://www.arjunjain.info/contact) to leave comments,ask question,suggest new feature or directly mail at arjun@arjunjain.info
+
+== Screenshots ==
+
+1. Default social share button
+2. Social share button when width less than 480px
 
 == Installation ==
 

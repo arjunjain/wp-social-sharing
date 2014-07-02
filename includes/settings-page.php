@@ -95,9 +95,9 @@ if( ! defined("SS_VERSION") ) {
 			</div>
 			<p><?php _e( 'Some other ways to support this plugin', 'wp-social-sharing' ); ?></p>
 			<ul class="ul-square">
-				<li><a href="#" target="_blank"><?php printf( __( 'Leave a %s review on WordPress.org', 'wp-social-sharing' ), '&#9733;&#9733;&#9733;&#9733;&#9733;' ); ?></a></li>
+				<li><a href="http://wordpress.org/support/view/plugin-reviews/wp-social-sharing?rate=5#postform" target="_blank"><?php printf( __( 'Leave a %s review on WordPress.org', 'wp-social-sharing' ), '&#9733;&#9733;&#9733;&#9733;&#9733;' ); ?></a></li>
 				<li><a href="http://twitter.com/intent/tweet/?text=<?php echo urlencode('I am using Wordpress "Social Sharing" plugin to show social sharing buttons on my WordPress site.'); ?>&via=arjun077&url=<?php echo urlencode('http://www.arjunjain.info'); ?>" target="_blank"><?php _e('Tweet about this plugin','wp-social-sharing');?></a></li>
-				<li><a href="#"><?php _e( 'Vote "works" on the WordPress.org plugin page', 'wp-social-sharing' ); ?></a></li>
+				<li><a href="http://wordpress.org/plugins/wp-social-sharing/#compatibility"><?php _e( 'Vote "works" on the WordPress.org plugin page', 'wp-social-sharing' ); ?></a></li>
 			</ul>
 		</div>
 		<div class="ss-box">
