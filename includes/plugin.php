@@ -18,7 +18,6 @@ function ss_get_options()
 			'facebook_text'=>"Share on Facebook",
 			'twitter_text'=>"Share on Twitter",
 			'googleplus_text'=>"Share on Google+",
-			'icon_order'=>'f,t,g'
 		);
 
 		$db_option = get_option( 'wp_social_sharing', array());

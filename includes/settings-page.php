@@ -28,7 +28,7 @@ if( ! defined("SS_VERSION") ) {
 						<div class="dndicon">
 						
 							<?php $s_order=get_option('wss_wp_social_sharing');
-								  if(empty($s_order)) $s_order='f,g,t';
+								  if(empty($s_order)) $s_order='f,t,g';
 								  $io=explode(',',rtrim($s_order,','));
 							foreach ($io as $i){
 								switch($i){
@@ -44,7 +44,7 @@ if( ! defined("SS_VERSION") ) {
 								}
 							}?>
 						</div>
-					<br /><small><?php _e('Drag the social icon to change the order', 'wp-social-sharing'); ?></small>
+					<br /><small><?php _e('Drag the social icon to change the order. No need to save.', 'wp-social-sharing'); ?></small>
 					</td>
 				</tr>
 				<tr valign="top">

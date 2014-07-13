@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SQC4WR7X
 Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter, googleplus, facebook
 Requires at least: 3.5
 Tested up to: 3.9.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv3 
 
 Adds very attractive responsive social sharing buttons of Facebook, Twitter and Google+ to wordpress posts, pages or media.
@@ -22,6 +22,7 @@ Most of the social sharing plugins uses images/api to display social share butto
 - Auto display to Post, Page and Media.
 - Custom Social Button text. 
 - 100% responsive. 
+- Reorder Social icon order easily.
 - No Image, button created using CSS3. For device width less than 480px, this plugin used one single image to display social icons.
 - Provide Shortcode, can integrated with any theme easily.
 
@@ -34,7 +35,7 @@ You can also use following shortcode
 This shortcode will use default wp social sharing plugin settings.
 
 ` 
-[wp_social_sharing social_options='facebook,twitter,googleplug' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+']
+[wp_social_sharing social_options='facebook,twitter,googleplus' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+' icon_order='f,t,g']
 `
 
 == Support ==
@@ -55,6 +56,12 @@ This shortcode will use default wp social sharing plugin settings.
 2. Alternatively, download the plugin and upload the contents of `wp-social-sharing.zip` to your plugins directory, which usually is `/wp-content/plugins/`. Activate the plugin.
 
 == Changelog ==
+= 1.1 - July 11, 2014 =
+
+- Fix facebook share for mobile devices
+- Add Icon order functionality. Now user can reorder the social icon.
+- Add settings link on plugin page.
+- Update plugin shortcode. Add *icon_order* field
 
 = 1.0 - June 30, 2014 =
 

@@ -30,7 +30,7 @@ class SS_Public {
 		$opts['icon_order']=get_option('wss_wp_social_sharing');
 		return $content . $this->social_sharing($opts);
 	}
-
+	
 	public function load_assets() 
 	{
 		$opts = ss_get_options();
@@ -57,8 +57,7 @@ class SS_Public {
 		);
 	
 		$opts['icon_order']=get_option('wss_wp_social_sharing');
-		// create final arguments array
-//		$args = wp_parse_args( $opts, $defaults );
+
 		if(!is_array($args['social_options']))
 			$args['social_options'] = array_filter( array_map( 'trim', explode( ',', $args['social_options'] ) ) );
 		extract( $args );
@@ -81,7 +80,7 @@ class SS_Public {
 	        	switch($o) {
 	        		case 'f':
 	        			if(in_array('facebook', $social_options)){
-	        			?><a <?php echo $loadjs;?> rel="external nofollow" class="button-facebook ss-sbutton" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo $url; ?>&p[title]=<?php echo $title; ?>" target="_blank" ><?php echo $facebook_text; ?></a><?php
+	        			?><a <?php echo $loadjs;?> rel="external nofollow" class="button-facebook ss-sbutton" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" ><?php echo $facebook_text; ?></a><?php
 	        			}
 	        		break;
 	        		case 't':
