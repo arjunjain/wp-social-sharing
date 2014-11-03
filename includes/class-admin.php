@@ -20,6 +20,7 @@ class SS_Admin {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_css' ) );
 		}
 	}
+	
 	function wss_plugin_activation_action(){
 		$defaults = array(
 				'twitter_username' => "",
@@ -35,6 +36,20 @@ class SS_Admin {
 		update_option( 'wp_social_sharing', $defaults );
 		update_option( 'wss_wp_social_sharing','f,t,g,l');
 		update_option( 'wss_pluign_version ',SS_VERSION);
+	}
+	
+	public function wss_update_db_check(){
+		$current_version=get_option('wss_plugin_version');
+		if($current_version === FALSE)
+			$current_version='1.0';
+		
+		// change for linkedin button
+		if($current_version != '1.3'){
+			update_option('wss_wp_social_sharing','f,t,g,l');
+			$default=get_option('wp_social_sharing');
+			$default['linkedin_text']='Share on Linkedin';
+			update_option('wp_social_sharing',$default);	
+		}
 	}
 
 	public function load_css() {

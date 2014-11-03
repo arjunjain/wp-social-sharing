@@ -31,3 +31,5 @@ if( ! is_admin() ) {
 }
 
 register_activation_hook(__FILE__, array('SS_Admin','wss_plugin_activation_action'));
+
+add_action( 'plugins_loaded',array('SS_Admin', 'wss_update_db_check' ));
