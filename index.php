@@ -45,5 +45,6 @@ function wss_update_db_check_while_plugin_upgrade(){
 		$default=get_option('wp_social_sharing');
 		$default['linkedin_text']='Share on Linkedin';
 		update_option('wp_social_sharing',$default);
+		update_option('wss_plugin_version','1.3');
 	}
 }
