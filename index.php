@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( "SS_VERSION", "1.0" );
+define( "SS_VERSION", "1.3" );
 define( "SS_PLUGIN_DIR", plugin_dir_path( __FILE__ ) ); 
 define( "SS_PLUGIN_URL", plugins_url( '/' , __FILE__ ) );
 
