@@ -3,7 +3,7 @@ Contributors: arjunjain08
 Author URI: http://www.arjunjain.info
 Plugin URI: http://wordpress.org/plugins/wp-social-sharing/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SQC4WR7X5JGDY&lc=IN&item_name=WP%20Social%20Sharing&item_number=7&button_subtype=services&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted
-Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter, googleplus, facebook, linkedin
+Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter, googleplus, facebook, linkedin, custom post type
 Requires at least: 3.5
 Tested up to: 4.0
 Stable tag: 1.3
@@ -53,7 +53,8 @@ You can also use following shortcode
 == Changelog ==
 
 = 1.3 - November 3, 2014 =
-- Add Linkedin button.
+- Add Linkedin share button.
+- Update CSS
 
 = 1.2 - August 8, 2014 =
 - Fixed empty shortcode.
