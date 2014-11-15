@@ -59,7 +59,7 @@ class SS_Public {
 		if(!is_array($social_options))
 			$social_options = array_filter( array_map( 'trim', explode( ',',$social_options ) ) );
 		
-		$title = urlencode( get_the_title() );
+		$title = get_the_title();
 		$url = urlencode( get_permalink() );
 	
 		$loadjs='';
