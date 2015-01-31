@@ -31,10 +31,11 @@ class SS_Admin {
 				'twitter_text'=>"Share on Twitter",
 				'googleplus_text'=>"Share on Google+",
 				'linkedin_text'=>"Share on Linkedin",
+				'pinterest_text'=>"Share on Pinterest",
 				'show_icons'=>'0',
 		);
 		update_option( 'wp_social_sharing', $defaults );
-		update_option( 'wss_wp_social_sharing','f,t,g,l');
+		update_option( 'wss_wp_social_sharing','f,t,g,l,p');
 		update_option( 'wss_pluign_version ',SS_VERSION);
 	}
 	
@@ -51,6 +52,8 @@ class SS_Admin {
 		$settings['facebook_text'] = trim( strip_tags( $settings['facebook_text'] ) );
 		$settings['twitter_text'] = trim( strip_tags( $settings['twitter_text'] ) );
 		$settings['googleplus_text'] = trim( strip_tags( $settings['googleplus_text'] ) );
+		$settings['linkedin_text'] = trim( strip_tags( $settings['linkedin_text'] ) );
+		$settings['pinterest_text'] = trim( strip_tags( $settings['pinterest_text'] ) );
 		$settings['auto_add_post_types'] = ( isset( $settings['auto_add_post_types'] ) ) ? $settings['auto_add_post_types'] : array();
 		$settings['show_sharebutton'] = ( isset( $settings['show_sharebutton'] ) ) ? $settings['show_sharebutton'] : array();
 		return $settings;
