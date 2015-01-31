@@ -19,7 +19,8 @@ function ss_get_options()
 			'twitter_text'=>"Share on Twitter",
 			'googleplus_text'=>"Share on Google+",
 			'linkedin_text'=>"Share on Linkedin",
-			'pinterest_text'=>"Share on Pinterest"
+			'pinterest_text'=>"Share on Pinterest",
+			'pinterest_image'=>"",
 		);
 
 		$db_option = get_option( 'wp_social_sharing', array());

@@ -75,19 +75,28 @@ if( ! defined("SS_VERSION") ) {
 				<tr valign="top">
 					<th><label for="googleplus_text"><?php _e('Google plus share button text','wp-social-sharing');?></label></th>
 					<td>
-						<input type="text" name="wp_social_sharing[googleplus_text]" id="googleplus_text" class="widefat" value="<?php echo esc_attr($opts['googleplus_text']); ?>"> 
+						<input type="text" name="wp_social_sharing[googleplus_text]" id="googleplus_text" class="widefat" value="<?php echo esc_attr($opts['googleplus_text']); ?>" /> 
 					</td>
 				</tr>
 				<tr valign="top">
 					<th><label for="linkedin_text"><?php _e('Linkedin share button text','wp-social-sharing');?></label></th>
 					<td>
-						<input type="text" name="wp_social_sharing[linkedin_text]" id="linkedin_text" class="widefat" value="<?php echo esc_attr($opts['linkedin_text']); ?>"> 
+						<input type="text" name="wp_social_sharing[linkedin_text]" id="linkedin_text" class="widefat" value="<?php echo esc_attr($opts['linkedin_text']); ?>" /> 
 					</td>
 				</tr>
 				<tr valign="top">
 					<th><label for="pinterest_text"><?php _e('Pinterest share button text','wp-social-sharing');?></label></th>
 					<td>
-						<input type="text" name="wp_social_sharing[pinterest_text]" id="pinterest_text" class="widefat" value="<?php echo esc_attr($opts['pinterest_text']); ?>"> 
+						<input type="text" name="wp_social_sharing[pinterest_text]" id="pinterest_text" class="widefat" value="<?php echo esc_attr($opts['pinterest_text']); ?>" /> 
+					</td>
+				</tr>
+				<tr valign="top">
+					<th><label for="pinterest_image"><?php _e('Default share image','wp-social-sharing')?></label></th>
+					<td>
+						<input type="text" name="wp_social_sharing[pinterest_image]" id="pinterest_image"  value="<?php echo esc_attr($opts['pinterest_image']); ?>"/><input type="button" class="set_custom_images button" id="set_custom_images" value="<?php _e('Upload','wp-social-sharing')?>" />
+						<input type="button" class="button" id="remove_custom_images" value="<?php _e('Remove','wp-social-sharing')?>" />
+						<br /><small><?php _e('Required for Facebook and Pinterest', 'wp-social-sharing'); ?></small>
+						<div id="set_custom_image_src"><?php if($opts['pinterest_image'] != ''): ?><img src="<?php echo $opts['pinterest_image'];?>" width="100px" /> <?php endif;?></div>
 					</td>
 				</tr>
 				<tr>
