@@ -53,7 +53,7 @@ class SS_Public {
 				'googleplus_text' => __( 'Share on Google+', 'social-sharing' ),
 				'linkedin_text' => __('Share on Linkedin', 'social-sharing' ),
 				'pinterest_text'=>__('Share on Pinterest','social-sharing'),
-				'pinterest_image'=>SS_PLUGIN_URL.'/static/blank.jpg', 
+				'social_image'=> '', 
 				'icon_order'=>'f,t,g,l,p',
 				'show_icons'=>'0'	
 		),$atts));
@@ -72,8 +72,12 @@ class SS_Public {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'medium' );
 		$thumb_url = $thumb['0'];
 		if($thumb_url == ''){
-			$thumb_url=$pinterest_image;
+			$thumb_url = SS_PLUGIN_URL.'static/blank.jpg';
 		}
+		if($social_image == ''){
+			$social_image = $thumb_url;
+		}
+		$social_image = urlencode($social_image);
 		
 		$opts=ss_get_options();
 		foreach ($opts['load_static'] as $static){
@@ -125,7 +129,7 @@ class SS_Public {
 	        		break;
 	        		case 'p':
 	        			if(in_array('pinterest', $social_options)){
-	        				?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_pinterest;?>" href="http://pinterest.com/pin/create/button/?url=<?php echo $url;?>&description=<?php echo $title;?>" target="_blank" ><?php echo $pinterest_text; ?></a><?php
+	        				?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_pinterest;?>" href="http://pinterest.com/pin/create/button/?url=<?php echo $url;?>&media=<?php echo $social_image;?>&description=<?php echo $title;?>" target="_blank" ><?php echo $pinterest_text; ?></a><?php
 	        			}
 	        		break;
 	        	}
