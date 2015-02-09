@@ -72,7 +72,12 @@ class SS_Public {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'medium' );
 		$thumb_url = $thumb['0'];
 		if($thumb_url == ''){
-			$thumb_url = SS_PLUGIN_URL.'static/blank.jpg';
+			if($atts['pinterest_image'] == ''){
+				$thumb_url = SS_PLUGIN_URL.'static/blank.jpg';								
+			}
+			else{
+				$thumb_url = $atts['pinterest_image'];	
+			}
 		}
 		if($social_image == ''){
 			$social_image = $thumb_url;
