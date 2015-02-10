@@ -52,7 +52,7 @@ You can also use following shortcode
 2. Alternatively, download the plugin and upload the contents of `wp-social-sharing.zip` to your plugins directory, which usually is `/wp-content/plugins/`. Activate the plugin.
 
 == Changelog ==
-= 1.6 - January 25, 2015 = 
+= 1.6 - February 10, 2015 = 
 - Add Pinterest share button
 - Update button CSS
 

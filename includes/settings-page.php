@@ -95,7 +95,7 @@ if( ! defined("SS_VERSION") ) {
 					<td>
 						<input type="text" name="wp_social_sharing[pinterest_image]" id="pinterest_image"  value="<?php echo esc_attr($opts['pinterest_image']); ?>"/><input type="button" class="set_custom_images button" id="set_custom_images" value="<?php _e('Upload','wp-social-sharing')?>" />
 						<input type="button" class="button" id="remove_custom_images" value="<?php _e('Remove','wp-social-sharing')?>" />
-						<br /><small><?php _e('Required for Facebook and Pinterest', 'wp-social-sharing'); ?></small>
+						<br /><small><?php _e('Required for Pinterest', 'wp-social-sharing'); ?></small>
 						<div id="set_custom_image_src"><?php if($opts['pinterest_image'] != ''): ?><img src="<?php echo $opts['pinterest_image'];?>" width="100px" /> <?php endif;?></div>
 					</td>
 				</tr>
