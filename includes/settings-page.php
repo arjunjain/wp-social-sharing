@@ -22,6 +22,7 @@ if( ! defined("SS_VERSION") ) {
 						<input type="checkbox" id="googleplus_share" name="wp_social_sharing[social_options][]" value="googleplus" <?php checked( in_array( 'googleplus', $opts['social_options'] ), true ); ?> /><label for="googleplus_share"><?php echo _e('Google Plus','wp-social-sharing')?></label>
 						<input type="checkbox" id="linkedin_share" name="wp_social_sharing[social_options][]" value="linkedin" <?php checked( in_array( 'linkedin', $opts['social_options'] ), true ); ?> /><label for="linkedin_share"><?php echo _e('Linkedin','wp-social-sharing')?></label>
 						<input type="checkbox" id="pinterest_share" name="wp_social_sharing[social_options][]" value="pinterest" <?php checked( in_array( 'pinterest', $opts['social_options'] ), true ); ?> /><label for="pinterest_share"><?php echo _e('Pinterest','wp-social-sharing')?></label>
+						<input type="checkbox" id="email_share" name="wp_social_sharing[social_options][]" value="email" <?php checked( in_array( 'email', $opts['social_options'] ), true ); ?> /><label for="email_share"><?php echo _e('Email','wp-social-sharing')?></label>
 					</td>
 				</tr>
 				<tr valign="top">
@@ -48,6 +49,8 @@ if( ! defined("SS_VERSION") ) {
 									case 'p':
 										echo '<div class="s-icon pinterest-icon" id="p"></div>';
 										break;
+									case 'e':
+										echo '<div class="s-icon email-icon" id="e"></div>';
 								}
 							}?>
 						</div>
@@ -82,6 +85,12 @@ if( ! defined("SS_VERSION") ) {
 					<th><label for="linkedin_text"><?php _e('Linkedin share button text','wp-social-sharing');?></label></th>
 					<td>
 						<input type="text" name="wp_social_sharing[linkedin_text]" id="linkedin_text" class="widefat" value="<?php echo esc_attr($opts['linkedin_text']); ?>" /> 
+					</td>
+				</tr>
+				<tr valign="top">
+					<th><label for="email_text"><?php _e('Email share button text','wp-social-sharing');?></label></th>
+					<td>
+						<input type="text" name="wp_social_sharing[email_text]" id="email_text" class="widefat" value="<?php echo esc_attr($opts['email_text']); ?>" /> 
 					</td>
 				</tr>
 				<tr valign="top">

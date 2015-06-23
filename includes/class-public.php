@@ -52,9 +52,10 @@ class SS_Public {
 				'facebook_text' => __( 'Share on Facebook', 'social-sharing' ),
 				'googleplus_text' => __( 'Share on Google+', 'social-sharing' ),
 				'linkedin_text' => __('Share on Linkedin', 'social-sharing' ),
+				'email_text' => __('Share via Email', 'social-sharing' ),
 				'pinterest_text'=>__('Share on Pinterest','social-sharing'),
 				'social_image'=> '', 
-				'icon_order'=>'f,t,g,l,p',
+				'icon_order'=>'f,t,g,l,p,e',
 				'show_icons'=>'0'	
 		),$atts));
 
@@ -91,19 +92,21 @@ class SS_Public {
 		    }
 		}
 		
-		$ssbutton_facebook='button-facebook';
-		$ssbutton_twitter='button-twitter';
-		$ssbutton_googleplus='button-googleplus';
-		$ssbutton_linkedin='button-linkedin';
-		$ssbutton_pinterest='button-pinterest';
+		$ssbutton_facebook		=	'button-facebook';
+		$ssbutton_twitter		=	'button-twitter';
+		$ssbutton_googleplus	=	'button-googleplus';
+		$ssbutton_linkedin		=	'button-linkedin';
+		$ssbutton_pinterest		=	'button-pinterest';
+		$ssbutton_email			=	'button-email';
 		$sssocial_sharing='';
 		if($show_icons){
-			$sssocial_sharing='ss-social-sharing';
-			$ssbutton_facebook='ss-button-facebook';
-			$ssbutton_twitter='ss-button-twitter';
-			$ssbutton_googleplus='ss-button-googleplus';
-			$ssbutton_linkedin='ss-button-linkedin';	
-			$ssbutton_pinterest='ss-button-pinterest';
+			$sssocial_sharing		=	'ss-social-sharing';
+			$ssbutton_facebook		=	'ss-button-facebook';
+			$ssbutton_twitter		=	'ss-button-twitter';
+			$ssbutton_googleplus	=	'ss-button-googleplus';
+			$ssbutton_linkedin		=	'ss-button-linkedin';	
+			$ssbutton_email			=	'ss-button-email';
+			$ssbutton_pinterest		=	'ss-button-pinterest';
 		}
 		$icon_order=explode(',',$icon_order);
 		ob_start();
@@ -137,6 +140,11 @@ class SS_Public {
 	        				?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_pinterest;?>" href="http://pinterest.com/pin/create/button/?url=<?php echo $url;?>&media=<?php echo $social_image;?>&description=<?php echo $title;?>" target="_blank" ><?php echo $pinterest_text; ?></a><?php
 	        			}
 	        		break;
+					case 'e':
+						if(in_array('email', $social_options)){
+							?><a title="<?php echo $title?>" rel="external nofollow" class="<?php echo $ssbutton_email;?>" href="mailto:type email address here?subject=I wanted to share this post with you from <?php bloginfo('name'); ?>&body=<?php echo $title; ?>&#32;&#32;<?php echo $url ?>" target="_blank" ><?php echo $email_text; ?></a><?php 
+						}
+					break; 
 	        	}
 	        } ?>
 	    </div>
