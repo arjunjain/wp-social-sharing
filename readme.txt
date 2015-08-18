@@ -3,10 +3,10 @@ Contributors: arjunjain08
 Author URI: http://www.arjunjain.info
 Plugin URI: http://wordpress.org/plugins/wp-social-sharing/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SQC4WR7X5JGDY&lc=IN&item_name=WP%20Social%20Sharing&item_number=7&button_subtype=services&currency_code=USD&bn=PP%2dBuyNowBF%3abtn_buynowCC_LG%2egif%3aNonHosted
-Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter, googleplus, facebook, linkedin, pinterest, add to custom post type
+Tags: responsive social buttons, responsive social sharing buttons, responsive button, social buttons, social sharing, sharing buttons, twitter share, googleplus share, facebook share, linkedin share, pinterest share, share button for custom post type
 Requires at least: 3.5
-Tested up to: 4.2.2
-Stable tag: 1.7
+Tested up to: 4.2.4
+Stable tag: 1.8
 License: GPLv3 
 
 Adds very attractive responsive social sharing buttons of Facebook, Twitter, Linkedin, Pinterest and Google+ to wordpress posts, pages or media.
@@ -31,7 +31,7 @@ Most of the social sharing plugins uses images/api to display social share butto
 You can also use following shortcode
 
 ` 
-[wp_social_sharing social_options='facebook,twitter,googleplus,linkedin,pinterest' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+' linkedin_text='Share on Linkedin' pinterest_text="Share on Pinterest" icon_order='f,t,g,l,p' show_icons='0' before_button_text='' social_image='']
+[wp_social_sharing social_options='facebook,twitter,googleplus,linkedin,pinterest' twitter_username='arjun077' facebook_text='Share on Facebook' twitter_text='Share on Twitter' googleplus_text='Share on Google+' linkedin_text='Share on Linkedin' pinterest_text="Share on Pinterest" icon_order='f,t,g,l,p' show_icons='0' before_button_text='' text_position='' social_image='']
 `
 [Demo](http://www.arjunjain.info/wp-social-sharing/)
 
@@ -53,6 +53,11 @@ You can also use following shortcode
 2. Alternatively, download the plugin and upload the contents of `wp-social-sharing.zip` to your plugins directory, which usually is `/wp-content/plugins/`. Activate the plugin.
 
 == Changelog ==
+
+= 1.8 - August 18, 2015 = 
+- Add Text Position option in Settings page and Also in shortcode
+- Add Social icon position option (Global Option)
+
 = 1.7 - June 24, 2015 =
 - Add Text Before sharing buttons
 

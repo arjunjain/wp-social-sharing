@@ -28,7 +28,14 @@ class SS_Public {
 			return $content;
 		}
 		$opts['icon_order']=get_option('wss_wp_social_sharing');
-		return $content . $this->social_sharing($opts);
+		
+		if($opts['social_icon_position'] == 'before' ){
+			return $this->social_sharing($opts).$content;
+		}
+		else{
+			return $content . $this->social_sharing($opts);			
+		}
+
 	}
 	
 	public function load_assets() 
@@ -53,10 +60,11 @@ class SS_Public {
 				'googleplus_text' => __( 'Share on Google+', 'social-sharing' ),
 				'linkedin_text' => __('Share on Linkedin', 'social-sharing' ),
 				'pinterest_text'=>__('Share on Pinterest','social-sharing'),
-				'social_image'=> '', 
 				'icon_order'=>'f,t,g,l,p',
+				'social_image'=> '', 
 				'show_icons'=>'0',
-				'before_button_text'=>''
+				'before_button_text'=>'',
+				'text_position'=> 'left'
 		),$atts));
 
 		if(!is_array($social_options))
@@ -110,8 +118,8 @@ class SS_Public {
 		ob_start();
 		?>
 		<div class="social-sharing <?php echo $sssocial_sharing;?>">
-			<?php if(!empty($before_button_text)):?>
-			<span><?php echo $before_button_text; ?></span>
+			<?php if(!empty($before_button_text) && ($text_position == 'left' || $text_position == 'top')):?>
+			<span class="<?php echo $text_position;?>"><?php echo $before_button_text; ?></span>
 	        <?php endif;?>
 	        <?php 
 	        foreach($icon_order as $o) {
@@ -143,6 +151,9 @@ class SS_Public {
 	        		break;
 	        	}
 	        } ?>
+	        <?php if(!empty($before_button_text) && ($text_position == 'bottom' || $text_position == 'right')):?>
+			<span class="<?php echo $text_position;?>"><?php echo $before_button_text; ?></span>
+	        <?php endif;?>
 	    </div>
 	    <?php
 	  	$output = ob_get_contents();

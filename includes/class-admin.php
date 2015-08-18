@@ -26,6 +26,7 @@ class SS_Admin {
 				'twitter_username' => "",
 				'auto_add_post_types' => array( 'post' ),
 				'social_options'=>array('facebook','twitter','googleplus'),
+				'social_icon_position'=>'after',
 				'load_static'=>array('load_css','load_js'),
 				'facebook_text'=>"Share on Facebook",
 				'twitter_text'=>"Share on Twitter",
@@ -34,7 +35,8 @@ class SS_Admin {
 				'pinterest_text'=>"Share on Pinterest",
 				'pinterest_image'=>"",
 				'show_icons'=>'0',
-				'before_button_text'=>''
+				'before_button_text'=>'',
+				'text_position'=>'left'
 		);
 		update_option( 'wp_social_sharing', $defaults );
 		update_option( 'wss_wp_social_sharing','f,t,g,l,p');

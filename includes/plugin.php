@@ -22,6 +22,7 @@ function ss_get_options()
 			'pinterest_text'=>"Share on Pinterest",
 			'pinterest_image'=>"",
 			'before_button_text'=>'',
+			'text_position' => 'left'
 		);
 
 		$db_option = get_option( 'wp_social_sharing', array());

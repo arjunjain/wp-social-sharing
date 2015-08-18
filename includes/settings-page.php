@@ -54,6 +54,15 @@ if( ! defined("SS_VERSION") ) {
 					<br /><small><?php _e('Drag the social icon to change the order. No need to save.', 'wp-social-sharing'); ?></small>
 					</td>
 				</tr>
+				<tr>
+					<th><label for="social_icon_position"><?php _e('Social Icon Position','wp-social-sharing');?></label></th>
+					<td>
+						<select name="wp_social_sharing[social_icon_position]">
+							<option value="before" <?php if($opts['social_icon_position'] == 'before') echo "selected='selected'"?>>Before Content</option>
+							<option value="after" <?php if($opts['social_icon_position'] == 'after') echo "selected='selected'"?>>After Content</option>
+						</select>
+					</td>
+				</tr>
 				<tr valign="top">
 					<th><label for="alws_show_icons"><?php _e('Always show social icons','wp-social-sharing');?></label></th>
 					<td>
@@ -64,6 +73,17 @@ if( ! defined("SS_VERSION") ) {
 					<th><label for="before_button_text"><?php _e('Text before Sharing buttons','wp-social-sharing');?></label></th>
 					<td>
 						<input type="text" class="widefat" name="wp_social_sharing[before_button_text]" id="before_button_text" value="<?php echo esc_attr($opts['before_button_text']); ?>" /> 
+					</td>
+				</tr>
+				<tr valign="top">
+					<th><label for="before_button_text"><?php _e('Text Position','wp-social-sharing');?></label></th>
+					<td>
+						<select name="wp_social_sharing[text_position]">
+							<option value="left" <?php if($opts['text_position'] == 'left') echo "selected='selected'"?>>Left</option>
+							<option value="right" <?php if($opts['text_position'] == 'right') echo "selected='selected'"?>>Right</option>
+							<option value="top" <?php if($opts['text_position'] == 'top') echo "selected='selected'"?>>Top</option>
+							<option value="bottom" <?php if($opts['text_position'] == 'bottom') echo "selected='selected'"?>>Bottom</option>
+						</select>
 					</td>
 				</tr>
 				<tr valign="top">
