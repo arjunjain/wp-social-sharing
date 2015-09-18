@@ -56,7 +56,7 @@ function wss_update_db_check_while_plugin_upgrade(){
 		update_option('wss_wp_social_sharing',$current_wss_option);
 		$default=get_option('wp_social_sharing');
 		$default['pinterest_text']='Share on Pinterest';
-                $default['xing_text']='Share on Pinterest';
+                $default['xing_text']='Share on Xing';
 		update_option('wp_social_sharing',$default);
 		update_option('wss_plugin_version','1.5');
 	}
