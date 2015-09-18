@@ -52,10 +52,11 @@ function wss_update_db_check_while_plugin_upgrade(){
 	}
 	else if($db_version  == '1.3'){ // update db from version 1.3 to 1.4
 		$current_wss_option=get_option('wss_wp_social_sharing');
-		$current_wss_option = $current_wss_option.',p';
+		$current_wss_option = $current_wss_option.',p,x';
 		update_option('wss_wp_social_sharing',$current_wss_option);
 		$default=get_option('wp_social_sharing');
 		$default['pinterest_text']='Share on Pinterest';
+                $default['xing_text']='Share on Pinterest';
 		update_option('wp_social_sharing',$default);
 		update_option('wss_plugin_version','1.5');
 	}
