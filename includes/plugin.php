@@ -13,7 +13,7 @@ function ss_get_options()
 		$defaults = array(
 			'twitter_username' => "",
 			'auto_add_post_types' => array( 'post' ),
-			'social_options'=>array('facebook','twitter','googleplus','linkedin','pinterest'),
+			'social_options'=>array('facebook','twitter','googleplus','linkedin','pinterest','xing'),
 			'load_static'=>array('load_css','load_js'),
 			'facebook_text'=>"Share on Facebook",
 			'twitter_text'=>"Share on Twitter",
@@ -21,6 +21,7 @@ function ss_get_options()
 			'linkedin_text'=>"Share on Linkedin",
 			'pinterest_text'=>"Share on Pinterest",
 			'pinterest_image'=>"",
+			'xing_text'=>"Share on Xing",
 			'before_button_text'=>'',
 			'text_position' => 'left'
 		);

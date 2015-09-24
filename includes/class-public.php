@@ -60,7 +60,8 @@ class SS_Public {
 				'googleplus_text' => __( 'Share on Google+', 'social-sharing' ),
 				'linkedin_text' => __('Share on Linkedin', 'social-sharing' ),
 				'pinterest_text'=>__('Share on Pinterest','social-sharing'),
-				'icon_order'=>'f,t,g,l,p',
+				'xing_text'=>__('Share on Xing','social-sharing'),
+				'icon_order'=>'f,t,g,l,p,x',
 				'social_image'=> '', 
 				'show_icons'=>'0',
 				'before_button_text'=>'',
@@ -105,6 +106,7 @@ class SS_Public {
 		$ssbutton_googleplus='button-googleplus';
 		$ssbutton_linkedin='button-linkedin';
 		$ssbutton_pinterest='button-pinterest';
+		$ssbutton_xing='button-xing';
 		$sssocial_sharing='';
 		if($show_icons){
 			$sssocial_sharing='ss-social-sharing';
@@ -113,6 +115,7 @@ class SS_Public {
 			$ssbutton_googleplus='ss-button-googleplus';
 			$ssbutton_linkedin='ss-button-linkedin';	
 			$ssbutton_pinterest='ss-button-pinterest';
+			$ssbutton_xing='ss-button-xing';
 		}
 		$icon_order=explode(',',$icon_order);
 		ob_start();
@@ -148,6 +151,11 @@ class SS_Public {
 	        			if(in_array('pinterest', $social_options)){
 	        				?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_pinterest;?>" href="http://pinterest.com/pin/create/button/?url=<?php echo $url;?>&media=<?php echo $social_image;?>&description=<?php echo $title;?>" target="_blank" ><?php echo $pinterest_text; ?></a><?php
 	        			}
+				break;
+                                case 'x':
+                                        if(in_array('xing', $social_options)){
+                                                ?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_xing;?>" href="https://www.xing.com/spi/shares/new?url=<?php echo $url;?>" target="_blank" ><?php echo $xing_text; ?></a><?php
+                                        }
 	        		break;
 	        	}
 	        } ?>
