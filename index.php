@@ -38,15 +38,13 @@ function wss_update_db_check_while_plugin_upgrade(){
 	$db_version=get_option('wss_plugin_version');
 	if($db_version === FALSE)
 		$db_version='1.0';
-	
-	// change for linkedin button  
-    // Upgrade from db version lower than 1.3 to 1.4 
+
 	if($db_version == '1.0' ){
 		update_option('wss_wp_social_sharing','f,t,g,l,p,x');
 		$default=get_option('wp_social_sharing');
 		$default['linkedin_text']='Share on Linkedin';
 		$default['pinterest_text']='Share on Pinterest';
-                $default['xing_text']='Share on Xing';
+        $default['xing_text']='Share on Xing';
 		update_option('wp_social_sharing',$default);
 		update_option('wss_plugin_version','1.5');
 	}
@@ -56,17 +54,17 @@ function wss_update_db_check_while_plugin_upgrade(){
 		update_option('wss_wp_social_sharing',$current_wss_option);
 		$default=get_option('wp_social_sharing');
 		$default['pinterest_text']='Share on Pinterest';
-                $default['xing_text']='Share on Xing';
+    	$default['xing_text']='Share on Xing';
 		update_option('wp_social_sharing',$default);
 		update_option('wss_plugin_version','1.5');
 	}
-        else if($db_version  == '1.4'){ // update db from version 1.4 to 1.5
-                $current_wss_option=get_option('wss_wp_social_sharing');
-                $current_wss_option = $current_wss_option.',x';
-                update_option('wss_wp_social_sharing',$current_wss_option);
-                $default=get_option('wp_social_sharing');
-                $default['xing_text']='Share on Xing';
-                update_option('wp_social_sharing',$default);
-                update_option('wss_plugin_version','1.5');
-        }
+    else if($db_version  == '1.4'){ // update db from version 1.4 to 1.5
+    	$current_wss_option=get_option('wss_wp_social_sharing');
+        $current_wss_option = $current_wss_option.',x';
+        update_option('wss_wp_social_sharing',$current_wss_option);
+        $default=get_option('wp_social_sharing');
+        $default['xing_text']='Share on Xing';
+        update_option('wp_social_sharing',$default);
+        update_option('wss_plugin_version','1.5');
+    }
 }

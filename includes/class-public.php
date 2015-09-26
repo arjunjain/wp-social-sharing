@@ -13,8 +13,7 @@ class SS_Public {
 		add_shortcode( 'wp_social_sharing',array($this,'social_sharing'));
 	}
 	
-	public function add_links_after_content( $content )
-	{
+	public function add_links_after_content( $content ){
 		$opts = ss_get_options();
 		$show_buttons = false;
 		
@@ -23,7 +22,6 @@ class SS_Public {
 		}
 			
 		$show_buttons = apply_filters( 'ss_display', $show_buttons );
-	
 		if( ! $show_buttons ) {
 			return $content;
 		}
@@ -35,7 +33,6 @@ class SS_Public {
 		else{
 			return $content . $this->social_sharing($opts);			
 		}
-
 	}
 	
 	public function load_assets() 
@@ -72,6 +69,7 @@ class SS_Public {
 			$social_options = array_filter( array_map( 'trim', explode( ',',$social_options ) ) );
 		
 		remove_filter('the_title','wptexturize');
+		
 		$title = urlencode(html_entity_decode(get_the_title()));
 		add_filter('the_title','wptexturize');
 		
@@ -82,7 +80,7 @@ class SS_Public {
 		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'medium' );
 		$thumb_url = $thumb['0'];
 		if($thumb_url == ''){
-			if($atts['pinterest_image'] == ''){
+			if(isset($atts['pinterest_image']) && $atts['pinterest_image'] == ''){
 				$thumb_url = SS_PLUGIN_URL.'static/blank.jpg';								
 			}
 			else{
@@ -122,7 +120,7 @@ class SS_Public {
 		?>
 		<div class="social-sharing <?php echo $sssocial_sharing;?>">
 			<?php if(!empty($before_button_text) && ($text_position == 'left' || $text_position == 'top')):?>
-			<span class="<?php echo $text_position;?>"><?php echo $before_button_text; ?></span>
+			<span class="<?php echo $text_position;?> before-sharebutton-text"><?php echo $before_button_text; ?></span>
 	        <?php endif;?>
 	        <?php 
 	        foreach($icon_order as $o) {
@@ -151,16 +149,16 @@ class SS_Public {
 	        			if(in_array('pinterest', $social_options)){
 	        				?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_pinterest;?>" href="http://pinterest.com/pin/create/button/?url=<?php echo $url;?>&media=<?php echo $social_image;?>&description=<?php echo $title;?>" target="_blank" ><?php echo $pinterest_text; ?></a><?php
 	        			}
-				break;
-                                case 'x':
-                                        if(in_array('xing', $social_options)){
-                                                ?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_xing;?>" href="https://www.xing.com/spi/shares/new?url=<?php echo $url;?>" target="_blank" ><?php echo $xing_text; ?></a><?php
-                                        }
+					break;
+                    case 'x':
+                        if(in_array('xing', $social_options)){
+                    	    ?><a <?php echo $loadjs;?> rel="external nofollow" class="<?php echo $ssbutton_xing;?>" href="https://www.xing.com/spi/shares/new?url=<?php echo $url;?>" target="_blank" ><?php echo $xing_text; ?></a><?php
+                        }
 	        		break;
 	        	}
 	        } ?>
 	        <?php if(!empty($before_button_text) && ($text_position == 'bottom' || $text_position == 'right')):?>
-			<span class="<?php echo $text_position;?>"><?php echo $before_button_text; ?></span>
+			<span class="<?php echo $text_position;?>  before-sharebutton-text"><?php echo $before_button_text; ?></span>
 	        <?php endif;?>
 	    </div>
 	    <?php

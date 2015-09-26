@@ -20,9 +20,9 @@ if( ! defined("SS_VERSION") ) {
 						<input type="checkbox" id="facebook_share" name="wp_social_sharing[social_options][]" value="facebook" <?php checked( in_array( 'facebook', $opts['social_options'] ), true ); ?> /><label for="facebook_share"><?php echo _e('Facebook','wp-social-sharing')?></label>
 						<input type="checkbox" id="twitter_share" name="wp_social_sharing[social_options][]" value="twitter" <?php checked( in_array( 'twitter', $opts['social_options'] ), true ); ?> /><label for="twitter_share"><?php echo _e('Twitter','wp-social-sharing')?></label>
 						<input type="checkbox" id="googleplus_share" name="wp_social_sharing[social_options][]" value="googleplus" <?php checked( in_array( 'googleplus', $opts['social_options'] ), true ); ?> /><label for="googleplus_share"><?php echo _e('Google Plus','wp-social-sharing')?></label>
-						<input type="checkbox" id="linkedin_share" name="wp_social_sharing[social_options][]" value="linkedin" <?php checked( in_array( 'linkedin', $opts['social_options'] ), true ); ?> /><label for="linkedin_share"><?php echo _e('Linkedin','wp-social-sharing')?></label>
+						<br /><input type="checkbox" id="linkedin_share" name="wp_social_sharing[social_options][]" value="linkedin" <?php checked( in_array( 'linkedin', $opts['social_options'] ), true ); ?> /><label for="linkedin_share"><?php echo _e('Linkedin','wp-social-sharing')?></label>
 						<input type="checkbox" id="pinterest_share" name="wp_social_sharing[social_options][]" value="pinterest" <?php checked( in_array( 'pinterest', $opts['social_options'] ), true ); ?> /><label for="pinterest_share"><?php echo _e('Pinterest','wp-social-sharing')?></label>
-                                                <input type="checkbox" id="xing_share" name="wp_social_sharing[social_options][]" value="xing" <?php checked( in_array( 'xing', $opts['social_options'] ), true ); ?> /><label for="xing_share"><?php echo _e('Xing','wp-social-sharing')?></label>
+                        <input type="checkbox" id="xing_share" name="wp_social_sharing[social_options][]" value="xing" <?php checked( in_array( 'xing', $opts['social_options'] ), true ); ?> /><label for="xing_share"><?php echo _e('Xing','wp-social-sharing')?></label>
 
 					</td>
 				</tr>
@@ -50,13 +50,13 @@ if( ! defined("SS_VERSION") ) {
 									case 'p':
 										echo '<div class="s-icon pinterest-icon" id="p"></div>';
 										break;
-                                                                        case 'x':
-                                                                                echo '<div class="s-icon xing-icon" id="x"></div>';
-                                                                                break;
+                                    case 'x':
+                                        echo '<div class="s-icon xing-icon" id="x"></div>';
+										break;
 								}
 							}?>
 						</div>
-					<br /><small><?php _e('Drag the social icon to change the order. No need to save.', 'wp-social-sharing'); ?></small>
+						<br /><small><?php _e('Drag the social icon to change the order. No need to save.', 'wp-social-sharing'); ?></small>
 					</td>
 				</tr>
 				<tr>
@@ -130,12 +130,12 @@ if( ! defined("SS_VERSION") ) {
 						<div id="set_custom_image_src"><?php if($opts['pinterest_image'] != ''): ?><img src="<?php echo $opts['pinterest_image'];?>" width="100px" /> <?php endif;?></div>
 					</td>
 				</tr>
-                                <tr valign="top">
-                                        <th><label for="xing_text"><?php _e('Xing share button text','wp-social-sharing');?></label></th>
-                                        <td>
-                                                <input type="text" name="wp_social_sharing[xing_text]" id="xing_text" class="widefat" value="<?php echo esc_attr($opts['xing_text']); ?>" />
-                                        </td>
-                                </tr>
+                <tr valign="top">
+                	<th><label for="xing_text"><?php _e('Xing share button text','wp-social-sharing');?></label></th>
+                    <td>
+                    	<input type="text" name="wp_social_sharing[xing_text]" id="xing_text" class="widefat" value="<?php echo esc_attr($opts['xing_text']); ?>" />
+                    </td>
+                </tr>
 				<tr>
 					<th><label><?php _e('Load plugin scripts','wp-social-sharing');?></label></th>
 					<td>

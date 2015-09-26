@@ -5,8 +5,7 @@ if( ! defined("SS_VERSION") ) {
 	exit;
 }
 
-function ss_get_options()
-{	
+function ss_get_options(){	
 	static $options;
 
 	if( ! $options ) {
@@ -45,6 +44,7 @@ function ss_get_options()
 	}
 	return $options;
 }
+
 add_action('admin_footer','include_icon_order_script');
 function include_icon_order_script(){
 	wp_enqueue_script( 'jquery-ui-sortable' );
